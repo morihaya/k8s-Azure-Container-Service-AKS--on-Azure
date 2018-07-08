@@ -30,10 +30,11 @@ spec:
   - name: v2
     labels:
       version: v2
-  outlierDetection:
-      http:
-        consecutiveErrors: 1
-        interval: 1s
-        baseEjectionTime: 3m
-        maxEjectionPercent: 100
+  trafficPolicy:
+    outlierDetection:
+        http:
+    	    consecutiveErrors: 1
+	    interval: 1s
+            baseEjectionTime: 3m
+            maxEjectionPercent: 100
 ---
